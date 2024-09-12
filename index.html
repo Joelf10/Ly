@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Mi Amor</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      background-color: #fff8f0;
+      overflow: hidden; /* Deshabilita el desplazamiento inicialmente */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .header {
+      background-image: url('ly.jpg');
+      height: 100vh;
+      width: 100vw;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.5); 
+      padding: 20px 40px;
+      border-radius: 15px;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .header p {
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 15px 30px;
+      background-color: #ffb6c1;
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #ff7f93;
+    }
+
+    /* Secciones centradas y mejor diseño */
+    .section, .section-significance, .section-quotes {
+      padding: 60px;
+      text-align: center;
+      background-color: #fff;
+      max-width: 800px;
+      margin: 40px auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s, transform 0.8s;
+      display: none; /* Ocultas inicialmente */
+    }
+
+    /* Estilo de las secciones activas */
+    .section.active, .section-significance.active, .section-quotes.active {
+      opacity: 1;
+      transform: translateY(0);
+      display: block;
+    }
+
+    .section h2, .section-significance h2, .section-quotes h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ff6f61;
+    }
+
+    .section p, .section-significance p, .section-quotes p {
+      font-size: 1.3rem;
+      color: #555;
+    }
+
+    .quote-container {
+      margin-top: 30px;
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 1.5rem;
+      color: #555;
+      margin-bottom: 30px;
+      padding: 10px;
+      background-color: #ffe4e1;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 20px auto;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <div class="header">
+    <div class="container">
+      <h1>Para Mi Amor</h1>
+      <p>Cada día a tu lado es un regalo que atesoro</p>
+      <button class="btn" onclick="habilitarDesplazamiento()">Descubre más</button>
+    </div>
+  </div>
+
+  <!-- Sección 2: ¿Por qué te amo? -->
+  <div class="section" id="section1">
+    <div class="container">
+      <h2>¿Por qué te amo?</h2>
+      <p>Porque llenas mis días de luz, porque con tu sonrisa todo parece mejor, y porque contigo a mi lado, la vida es más hermosa.</p>
+    </div>
+  </div>
+
+  <!-- Sección 3: Lo que significas para mí -->
+  <div class="section-significance" id="section2">
+    <div class="container">
+      <h2>Lo que significas para mí</h2>
+      <p>Eres mi inspiración, mi apoyo incondicional, y la persona que da sentido a cada uno de mis días. Sin ti, nada sería igual.</p>
+    </div>
+  </div>
+
+  <!-- Sección 5: Frases o canciones favoritas -->
+  <div class="section-quotes" id="section3">
+    <div class="container">
+      <h2>Frases que me inspiran por ti</h2>
+      <div class="quote-container">
+        <div class="quote">"Eres mi refugio en los días oscuros y mi alegría en los días brillantes."</div>
+        <div class="quote">"En tus ojos veo mi futuro, en tus manos mi destino, y en tu corazón mi hogar."</div>
+        <div class="quote">"Tu risa es la melodía que ilumina mis días."</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script para habilitar desplazamiento y mostrar secciones -->
+  <script>
+    function habilitarDesplazamiento() {
+      document.body.style.overflow = 'auto'; // Habilitar el desplazamiento
+      document.getElementById('section1').classList.add('active');
+      document.getElementById('section2').classList.add('active');
+      document.getElementById('section3').classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+
